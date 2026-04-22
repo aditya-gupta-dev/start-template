@@ -1,6 +1,8 @@
+'use client'
+
 import { ModeToggle } from "@/components/mode-toggle";
 import { Button } from "@/components/ui/button";
-import { SignedIn, SignedOut, SignInButton, SignOutButton } from "@clerk/nextjs";
+import { SignedIn, SignedOut, SignInButton, SignOutButton, useUser } from "@clerk/nextjs";
 
 export default function Home() {
   return (
@@ -8,7 +10,7 @@ export default function Home() {
       <SignedIn>
         <ModeToggle />
         <SignOutButton>
-          <Button>Sign out</Button>
+          <Button>Sign Out</Button>
         </SignOutButton>
       </SignedIn>
       <SignedOut>
